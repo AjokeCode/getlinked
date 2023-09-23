@@ -52,10 +52,14 @@ const Footer =()=>{
                 
                 <div className='footer-top-div5'>
                    <h1 className='footer-top-header5'>Follow Us</h1>
-                   <img src={img2} alt='img' className='footer-top-imgs'/>
-                   <img src={img3} alt='img' className='footer-top-imgs'/>
-                   <img src={img4} alt='img' className='footer-top-imgs'/>
-                   <img src={img5} alt='img' className='footer-top-imgs'/>     
+                   <img src={img2} alt='img' className='footer-top-imgs'
+                   onClick={handleURL('https://instagram.com/wasiu_maleeka?igshid=OGQ5ZDc2ODk2ZA==')}/>
+                   <img src={img3} alt='img' className='footer-top-imgs'
+                   onClick={handleURL('https://x.com/wasiu_maleek?t=EPtuY6LMRc3k3K-h_BIvPA&s=09')}/>
+                   <img src={img4} alt='img' className='footer-top-imgs'
+                   onClick={handleURL('https://www.facebook.com/abdulmaleek.wasiu')}/>
+                   <img src={img5} alt='img' className='footer-top-imgs' 
+                   onClick={handleURL('www.linkedin.com/in/wasiumaleek')}/>     
                 </div>
             </div>
             <img src={img1} alt="img" className='footer-top-img2'/>

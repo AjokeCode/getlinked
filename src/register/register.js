@@ -17,7 +17,6 @@ const Register =()=>{
         privacy_poclicy_accepted: 'false'
 
     })
-    const [click, setClick] = useState(false)
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({

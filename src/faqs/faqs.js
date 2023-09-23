@@ -5,11 +5,10 @@ import { RiArrowDropUpLine } from 'react-icons/ri';
 import img from './cwok_casual_21 1.png';
 import img1 from './_.png';
 import img2 from './_ (1).png';
-import { useContext } from "react";
-import Context from '../context/context';
+
 
 const FAQ = () => {
-    const value = useContext(Context)
+    
   const initialStates = Array(6).fill(false); // Adjust the size based on the number of FAQ items
   const [isClickArray, setIsClickArray] = useState(initialStates);
 
