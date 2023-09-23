@@ -1,0 +1,217 @@
+.register {
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 15rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    @media(max-width: 769px){
+        flex-direction: column;
+        align-items: center;
+      }
+
+}
+.register-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 740px;
+    height: 740px;
+    padding: 5rem 6rem;
+    border-radius: 12px;
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.03), #150E28, #150E28, #D434FE);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.03);
+    margin-left: -8rem;
+    @media(max-width: 769px){
+        align-items: center;
+        width: 396px;
+        height: 900px;
+        padding: 2rem ;
+        margin: 3rem 0 0 0;
+
+      }
+}
+.register-form-header {
+    font-size: 32px;
+    line-height: 39.36px;
+    font-weight: 600;
+    font-family: 'Clash Display' , sans-serif;
+    color: #D434FE;
+    margin-bottom: 3rem;
+}
+.register-form-div {
+    display: flex;
+    align-items: center;
+}
+.register-form-text {
+    font-size: 14px;
+    line-height: 17.07px;
+    font-weight: 400;
+    
+}
+.register-form-header2 {
+    font-size: 24px;
+    line-height: 29.26px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+
+    @media(max-width: 769px){
+      font-size: 20px;
+      line-height: 24.38px;
+      }
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media(max-width: 769px){
+        grid-template-columns: 1fr;
+        align-items: center;
+      }
+}
+.form-grid-1 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+.label {
+    font-size: 14px;
+    line-height: 17.07px;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    @media(max-width: 769px){
+        font-size: 13px;
+        line-height: 15.85px;
+      }
+}
+.input {
+    width: 263px;
+    height: 47px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    padding-left: 2rem;
+    background-color: rgba(255, 255, 255, 0.03);
+    @media(max-width: 769px){
+       font-size: 14px;
+       line-height: 17.07px;
+      }
+}
+.register-header3 {
+    font-size: 12px;
+    line-height: 14.63px;
+    font-weight: 400;
+    color: #D434FE;
+    margin-bottom: 2rem;
+    font-style: italic;
+    @media(max-width: 769px){
+        font-size: 9px;
+        line-height: 10.97px;
+
+      }
+}
+.register-header-div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.register-text {
+    font-size: 12px;
+    line-height: 14.63px;
+    font-weight: 400;
+    margin-left: 1rem;
+    @media(max-width: 769px){
+        font-size: 10px;
+        line-height: 12.19px;
+      }
+}
+.register-btn {
+    width: 558px;
+    height: 53px;
+    border-radius: 4px;
+    text-align: center;
+    background-image: linear-gradient(to right, #D434FE, #903AFF);
+    font-size: 16px;
+    line-height: 19.5px;
+    font-weight: 400;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    @media(max-width: 769px){
+        width: 155px;
+        height: 45px;
+    }
+
+}
+.register-img-3 {
+    margin-left: -12rem;
+    @media(max-width: 769px){
+       width: 195px;
+       height: 155px;
+      }
+}
+.none {
+    display: none;
+}
+.modal{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: 100;
+    background-color: rgba(21, 14, 40, 0.8);
+    transition: all .2s ease-in;
+    backdrop-filter: blur(5px);
+}
+.modal-div {
+    width: 699px;
+    height: 600px;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #D434FE;
+    padding: 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #FFFFFF;
+    @media(max-width: 769px){
+        width: 317px;
+        height: 467px;
+
+      }
+}
+.modal-header {
+    margin: 2rem 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    @media(max-width: 769px){
+        font-size: 16px;
+        line-height: 19.5px;
+      }
+}
+.modal-text {
+    font-size: 14px;
+    font-weight: 600;
+    font-style: normal;
+    text-align: center;
+    line-height: normal;
+    margin: 2rem 0;
+    @media(max-width: 769px){
+        font-size: 12px;
+        line-height: 14.63px;
+      }
+}
+.modal-link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.modal-img {
+    width: 258.98px;
+    height: 194.63px;
+}

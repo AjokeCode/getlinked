@@ -1,0 +1,49 @@
+.header {
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #150E28;
+    padding: 0 6rem;
+    position: fixed;
+    z-index: 300;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+.header-list {
+    font-size: 16px;
+    line-height: 19.5px;
+    font-weight: 400;
+    color: #FFFFFF;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.header-item {
+    margin-left: 2rem;
+}
+.header-1 {
+    font-size: 36px;
+    line-height: 44.28px;
+    font-weight: 700;
+    font-family: 'Clash Display' sans-serif;
+    color: #FFFFFF;
+}
+.header-1-span {
+    color: #D434FE;
+}
+.header-item-2 {
+    width: 172px;
+    height: 53px;
+    background-image: linear-gradient(to right bottom, #D434FE, #903aff);
+    text-align: center;
+    border-radius: 4px;
+    padding-top: 18px;
+}
+.header-link {
+    text-decoration: none;
+    color: #FFFFFF;
+    
+}

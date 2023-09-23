@@ -1,0 +1,69 @@
+.prize {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 2rem;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+    @media(max-width: 769px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.prize-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @media(max-width: 769px){
+        align-items: center;
+    }
+
+}
+.prize-right-header {
+    font-size: 32px;
+    line-height: 39.36px;
+    font-weight: 700;
+    font-family: 'Clash Display' sans-serif;
+    margin-bottom: 1rem;
+    @media(max-width: 769px){
+        font-size: 20px;
+        line-height: 24.6px;
+        text-align: center;
+        margin: 2rem 0;
+    }
+}
+.prize-right-span {
+    color: #D434FE;
+}
+.prize-right-text {
+    margin-bottom: 8rem;
+    font-size: 16px;
+    line-height: 27.34px;
+    font-weight: 400;
+
+    @media(max-width: 769px){
+        font-size: 12px;
+        line-height: 20.51px;
+        text-align: center;
+    }
+
+}
+.prize-right-img {
+    width: 100%;
+    @media(max-width: 769px){
+        width: 294.01px;
+        height: 209.73px;
+    }
+
+}
+
+.prize-left-img {
+    height: 100%;
+    margin-top: 15rem;
+    @media(max-width: 769px){
+       width: 321px;
+       height: 282px;
+       margin-top: 4rem;
+    }
+}

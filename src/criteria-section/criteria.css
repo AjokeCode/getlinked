@@ -1,0 +1,95 @@
+.criteria {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0.1rem;
+    background-color: #150E28;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    @media(max-width: 769px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}
+}
+.criteria-right {
+    padding: 4rem 1rem 0 0;
+    @media(max-width: 769px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+}
+
+}
+.criteria-right-header {
+    font-size: 32px;
+    line-height: 42.56px;
+    font-family: 'Clash Display' sans-serif;
+    margin-bottom: .8rem;
+    @media(max-width: 769px){
+        font-size: 20px;
+        line-height: 26.6px;
+}
+}
+.criteria-right-header2 {
+    color: #D434FE;
+}
+.criteria-right-text {
+    font-size: 16px;
+    line-height: 27.76px;
+    font-weight: 700;
+    color: #FF26B9;
+    margin-bottom: 1.8rem;
+    @media(max-width: 769px){
+        font-size: 13px;
+        line-height: 20.82px;
+}
+
+}
+.criteria-right-span {
+    font-size: 14px;
+    line-height: 24.29px;
+    font-weight: 400;
+    color: #ffffff;
+    @media(max-width: 769px){
+        font-size: 12px;
+        line-height: 22.56px;
+}
+}
+.criteria-right-btn {
+    width: 172px;
+    height: 53px;
+    background-image: linear-gradient(to right bottom, #D434FE, #903aff);
+    text-align: center;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 19.5px;
+    font-weight: 400;
+    color: #FFFFFF;
+    border: none;
+    margin-top: 1rem;
+    @media(max-width: 769px){
+        width: 96.35px;
+        height: 31.35px;
+        font-size: 12px;
+        line-height: 14.63px;
+}
+}
+.criteria-left {
+    margin-left: -1rem;
+    width: 710px;
+    @media(max-width: 769px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+}
+.criteria-left-img {
+    @media(max-width: 769px){
+        width: 332px;
+        height: 275px;
+}
+}

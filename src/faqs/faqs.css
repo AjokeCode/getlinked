@@ -1,0 +1,116 @@
+.faq {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 9rem;
+    background-color: #150E28;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    @media(max-width: 769px){
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+}
+}
+.none {
+    display: none;
+}
+.faq-que {
+    width: 600px;
+    max-height: 300px;
+    border-bottom: #D434FE solid 1px;
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+}
+.faq-left {
+    margin-top: 10rem;
+    @media(max-width: 769px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 3rem;
+}
+}
+.faq-left-header{
+    font-size: 32px;
+    line-height: 42.56px;
+    font-family: 'Clash Display' sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    @media(max-width: 769px){
+        font-size: 20px;
+        line-height: 26.6px;
+}
+
+}
+.faq-left-span {
+    color: #D434FE;
+}
+.faq-left-text {
+    font-size: 14px;
+    line-height: 27.5px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    @media(max-width: 769px){
+        font-size: 12px;
+}
+
+}
+
+.faq-left-span2 {
+    font-weight: 700;
+}
+.faq-que-headers {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    line-height: 27.5px;
+
+}
+.faq-que-header{
+    font-size: 14px;
+    @media(max-width: 769px){
+        font-size: 12px;
+        line-height: 18px;
+}
+
+}
+.faq-left-pad-icon{
+    font-size: 20px;
+    color: #D434FE;
+}
+.faq-right-img {
+    width: 100%;
+    @media(max-width: 769px){
+        width: 327px;
+        height: 327px;
+}
+}
+.faq-left-pad-text {
+    font-size: 14px;
+    line-height: 27.5px;
+    margin-top: 1rem;
+    @media(max-width: 769px){
+      font-size: 12px;
+}
+}
+.faq-right-top {
+    display: flex;
+    justify-content: space-around;
+    @media(max-width: 769px){
+        align-items: center;
+}
+}
+.faq-right-top-imgs {
+    margin-top: 5rem;
+    @media(max-width: 769px){
+        width: 50px;
+        height: 32px;
+}
+}
+.faq-right-top-img2{
+    @media(max-width: 769px){
+       width: 50px;
+       height: 31px;
+}
+}
