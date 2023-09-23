@@ -31,14 +31,12 @@
 }
 .ann-mobile{
     display: none;
-}
-.ann-mobile{
     @media(max-width: 769px){
         display: flex;
         justify-content: space-around;
 }
-
 }
+
 .ann-mobile-left {
     display: flex;
     flex-direction: column;

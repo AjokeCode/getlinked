@@ -51,9 +51,14 @@
     
 }
 .open {
-   color: #FFFFFF;
-   font-size: 4rem;
-   cursor: pointer;
+    display: none;
+    
+    @media(max-width: 769px){
+        display: block;
+    color: #FFFFFF;
+    font-size: 4rem;
+    cursor: pointer;
+    }
 }
 .close {
     color: #FFFFFF;
