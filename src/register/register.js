@@ -5,8 +5,28 @@ import img2 from './congratulation.png';
 import { Link } from "react-router-dom";
 import img4 from './1f6b6-2640.png';
 import img5 from './image_processing20200511-10310-13mnlsx.png';
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { BallTriangle } from "react-loader-spinner";
 const Register =()=>{
+    const [isLoading, setIsLoading]= useState(false)
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+      const revealcallbk = function (entries) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('section-hidden');
+      };
+  
+      const revealSection = new IntersectionObserver(revealcallbk, {
+        root: null,
+        threshold: 0.15,
+      });
+  
+      if (sectionRef.current) {
+        revealSection.observe(sectionRef.current);
+        sectionRef.current.classList.add('section-hidden');
+      }}, [])
     const [formData, setFormData] = useState({
         team_name: '' ,
         phone_number: '',  
@@ -27,6 +47,7 @@ const Register =()=>{
     const [isSuccessful, setIsSuccessful] = useState(false)
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true)
         try {
           const response = await fetch('https://backend.getlinked.ai/hackathon/registration', {
             method: 'POST',
@@ -37,18 +58,18 @@ const Register =()=>{
           });
       
           if (response.ok) {
-            console.log(response);
+            setIsLoading(false)
             setIsSuccessful(true)
             
           } else {
-            const errorData = await response.json();
+            setIsLoading(false)
             alert("There is error submitting this form please submit again");
-            console.error(errorData);
+            console.error(response)
             
           }
         } catch (error) {
             alert('Unexpected error occur')
-            console.error(error)
+            
         }};
     
     return(
@@ -71,7 +92,7 @@ const Register =()=>{
                 </button>
             </div>
         </div>
-        <div className="register">
+        <div className="register" ref={sectionRef}>
             <img src={img1} alt="img" className="register-img-3"/>
             
             <form onSubmit={handleSubmit} className="register-form">
@@ -135,7 +156,16 @@ const Register =()=>{
                     </p>
                 </div>
                 <button type="submit" className="register-btn" >
-                    Register
+                {isLoading?  (<BallTriangle
+                        height={80}
+                        width={80}
+                        radius={5}
+                        color="#ffffff"
+                        ariaLabel="ball-triangle-loading"
+                        wrapperClass={{}}
+                        wrapperStyle=""
+                        visible={true}
+                        />): (<>Register</>)}
                 </button>
             </form>
         </div>

@@ -7,8 +7,28 @@ import man from './man-wearing-smart-glasses-touching-virtual-screen 1.png';
 import shine from './Image 1.png';
 import star2 from './star (1).png';
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero =()=>{
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+      const revealcallbk = function (entries) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('section-hidden');
+      };
+  
+      const revealSection = new IntersectionObserver(revealcallbk, {
+        root: null,
+        threshold: 0.15,
+      });
+  
+      if (sectionRef.current) {
+        revealSection.observe(sectionRef.current);
+        sectionRef.current.classList.add('section-hidden');
+      }}, [])
+    
     const [daysTimer, setDaysTimer] = useState(0);
     const [hoursTimer, setHourTimer] = useState(0);
     const [minutesTimer, setMinutesTimer] = useState(0);
@@ -40,7 +60,7 @@ const Hero =()=>{
     });
     
     return(
-        <div className='hero'>
+        <div className='hero' ref={sectionRef}>
             <div className='hero-1'>
                 <img src={star} alt='img' className='hero-1-img'/>
                 <h1 className='hero-1-header'>
@@ -62,7 +82,7 @@ const Hero =()=>{
                 a chance to win a big price</p>
                 <div className='btn-flex'>
                 <button className='hero-2-left-btn'>
-                    Register
+                    <Link to={'/register'} className='hero-link'>Register</Link>
                 </button>
                 </div>
                 <img src={star2} alt='img' className='hero-2-right-img3'/>

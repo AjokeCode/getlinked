@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: 15rem 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     @media(max-width: 769px){
         flex-direction: column;
         align-items: center;
@@ -214,4 +215,8 @@
 .modal-img {
     width: 258.98px;
     height: 194.63px;
+}
+.section-hidden {
+    opacity: 0;
+    transform: translateY(12rem);
 }

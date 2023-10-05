@@ -6,6 +6,8 @@ import img5 from './Vector (14).png';
 import img6 from './Vector (15).png'
 import img7 from './Group (1).png';
 import './footer.css';
+import { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -13,22 +15,47 @@ const Footer =()=>{
     const handleURL =(url)=>{
         window.open(url, '_blank')
     }
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    }
+
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+      const revealcallbk = function (entries) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('section-hidden');
+      };
+  
+      const revealSection = new IntersectionObserver(revealcallbk, {
+        root: null,
+        threshold: 0.15,
+      });
+  
+      if (sectionRef.current) {
+        revealSection.observe(sectionRef.current);
+        sectionRef.current.classList.add('section-hidden');
+      }}, [])
     return(
-        <div className="footer">
+        <div className="footer" ref={sectionRef}>
             <div className='footer-top'>
             <img src={img1} alt="img" className='footer-top-img'/>
             <div className='footer-top-div'>
                 <h1 className='footer-top-header'>get<span className='footer-top-span'>linked</span></h1>
                 <p className='footer-top-text'>
-                    Getlinked Tech Hackhathon is a technology innovation program<br/>
-                    established by a group of organization with the aim of showcasing<br/>
+                    Getlinked Tech Hackhathon is a technology innovation program
+                    established by a group of organization with the aim of showcasing
                     young and talented individuals in the field of technology
                 </p>
                 
             <div className='footer-top-div2'>
                 <h1 className='footer-top-header2'>Terms of Use</h1>
                 <div className='footer-top-div3'></div>
-                <h1 className='footer-top-header3'>
+                <h1 className='footer-top-header2'>
                     Privacy Policy
                 </h1>
             </div>
@@ -36,17 +63,17 @@ const Footer =()=>{
             <div className='footer-top-div4'>
                 <h1 className='footer-top-header4'>Useful Links</h1>
                 <ul className='footer-top-list'>
-                    <li className='footer-top-item'>
-                        Overview
+                    <li className='footer-top-item' onClick={scrollToTop}>
+                        <Link to={'/overview'} className='footer-link'>Overview</Link>
                     </li>
-                    <li className='footer-top-item'>
-                        Timeline
+                    <li className='footer-top-item' onClick={scrollToTop}>
+                       <Link to={'/timeline'} className='footer-link'> Timeline</Link>
                     </li>
-                    <li className='footer-top-item'>
-                        FAQS
+                    <li className='footer-top-item' onClick={scrollToTop}>
+                    <Link to={'/faqs'} className='footer-link'>    FAQS</Link>
                     </li>
-                    <li className='footer-top-item'>
-                        Register
+                    <li className='footer-top-item' onClick={scrollToTop}>
+                        <Link to={'/register'} className='footer-link'>Register</Link>
                     </li>
                 </ul>
                 

@@ -6,6 +6,7 @@
     padding: 4rem 8rem;
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 .sponsor-header {
     font-size: 32px;
@@ -24,8 +25,12 @@
     font-weight: 400;
     margin-bottom: 3rem;
     text-align: center;
+    width: 452px;
+    height: 55px;
     @media(max-width: 769px){
         font-size: 12px;
+        width: 286px;
+        height: 62px;
     }
 }
 .sponsor-img {
@@ -34,4 +39,8 @@
       width: 333px;
       height: 148.59px;
     }
+}
+.section-hidden {
+    opacity: 0;
+    transform: translateY(12rem);
 }

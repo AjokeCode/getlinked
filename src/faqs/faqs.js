@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import './faqs.css';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 import { RiArrowDropUpLine } from 'react-icons/ri';
@@ -18,9 +18,27 @@ const FAQ = () => {
     setIsClickArray(newIsClickArray);
   };
   
+  const sectionRef = useRef(null);
+
+    useEffect(() => {
+      const revealcallbk = function (entries) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('section-hidden');
+      };
+  
+      const revealSection = new IntersectionObserver(revealcallbk, {
+        root: null,
+        threshold: 0.15,
+      });
+  
+      if (sectionRef.current) {
+        revealSection.observe(sectionRef.current);
+        sectionRef.current.classList.add('section-hidden');
+      }}, [])
 
   return (
-        <div className='faq'>
+        <div className='faq' ref={sectionRef}>
             <div className='faq-left'>
                 <h1 className='faq-left-header'>Frequently Ask<br/>
                 <span className='faq-left-span'>Questions</span></h1>

@@ -4,11 +4,12 @@
     padding: 6rem 9rem;
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 2s cubic-bezier(0.165, 0.84, 0.44, 1);
     @media(max-width: 769px){
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 3rem 4.5rem;
+        padding: 3rem 4.5rem 14rem 4.5rem;
     }
 }
 .intro-left {
@@ -76,10 +77,14 @@
     line-height: 27.5px;
     font-weight: 400;
     margin-top: 1rem;
+    width: 535px;
+    height: 165px;
     @media(max-width: 769px){
         margin-top: 2rem;
         text-align: center;
         font-size: 13px;
+        width: 321px;
+        height: 107px;
          
      }
 
@@ -88,4 +93,8 @@
     width: 21px;
     height: 25px;
     margin-top: 8rem;
+}
+.section-hidden {
+    opacity: 0;
+    transform: translateY(12rem);
 }

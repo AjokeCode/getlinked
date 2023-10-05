@@ -5,6 +5,7 @@
     background-color: #150E28;
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     @media(max-width: 769px){
         flex-direction: column;
         align-items: center;
@@ -30,6 +31,7 @@
     @media(max-width: 769px){
         font-size: 20px;
         line-height: 26.6px;
+        margin-bottom: 1.5rem;
 }
 }
 .criteria-right-header2 {
@@ -41,9 +43,14 @@
     font-weight: 700;
     color: #FF26B9;
     margin-bottom: 1.8rem;
+    width: 558px;
+    height: 75px;
     @media(max-width: 769px){
         font-size: 13px;
         line-height: 20.82px;
+        width: 296px;
+        height: 45px;
+        margin-bottom: 8rem;
 }
 
 }
@@ -92,4 +99,8 @@
         width: 332px;
         height: 275px;
 }
+}
+.section-hidden {
+    opacity: 0;
+    transform: translateY(12rem);
 }

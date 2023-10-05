@@ -9,7 +9,9 @@
     position: fixed;
     z-index: 300;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-
+    @media(max-width: 769px){
+        padding: 0 2rem;
+       }
 }
 .header-list {
     font-size: 16px;
@@ -33,6 +35,11 @@
     font-weight: 700;
     font-family: 'Clash Display' sans-serif;
     color: #FFFFFF;
+
+    @media(max-width: 769px){
+        font-size: 18px;
+        line-height: 20.79px;
+       }
 }
 .header-1-span {
     color: #D434FE;
@@ -54,7 +61,7 @@
     display: none;
     
     @media(max-width: 769px){
-        display: block;
+    display: block;
     color: #FFFFFF;
     font-size: 4rem;
     cursor: pointer;
@@ -62,8 +69,8 @@
 }
 .close {
     color: #FFFFFF;
-    font-size: 4rem;
-    margin-left: 26rem;
+    font-size: 6rem;
+    margin-left: 12rem;
     cursor: pointer;
     
 }
@@ -80,12 +87,12 @@
     line-height: 21.78px;
 }
 .ham-div {
-    padding: 25rem 0 2rem 2rem;
+    padding: 25rem 0 2rem 0;
     width: 338px;
     height: 492px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     background-color: #150E28;
-    
 }

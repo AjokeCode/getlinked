@@ -1,10 +1,29 @@
 import img1 from './9486889 1.png';
 import img2 from './Rewards.png';
 import './prize.css';
+import { useRef, useEffect } from 'react';
 
 const Prize =()=>{
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+      const revealcallbk = function (entries) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('section-hidden');
+      };
+  
+      const revealSection = new IntersectionObserver(revealcallbk, {
+        root: null,
+        threshold: 0.15,
+      });
+  
+      if (sectionRef.current) {
+        revealSection.observe(sectionRef.current);
+        sectionRef.current.classList.add('section-hidden');
+      }}, [])
     return(
-        <div className="prize">
+        <div className="prize" ref={sectionRef}>
             
                 <img src={img1} alt='img' className='prize-left-img'/>
         

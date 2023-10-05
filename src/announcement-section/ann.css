@@ -3,6 +3,7 @@
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     width: 100%;
+    transition: all 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .ann-header {
     font-size: 32px;
@@ -34,6 +35,7 @@
     @media(max-width: 769px){
         display: flex;
         justify-content: space-around;
+        padding-bottom: 8rem;
 }
 }
 
@@ -63,7 +65,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: -4rem;
+    margin-top: 2rem;
+    padding-left: 3rem;
 }
 .ann-left {
     display: flex;
@@ -82,7 +85,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin-top: 13rem;
+    margin-top: 10rem;
 }
 .ann-left-header {
     font-size: 24px;
@@ -90,11 +93,15 @@
     font-weight: 700;
     color: #D434FE;
     margin-bottom: 1rem;
+    width: 486px;
+    height: 58px;
 
     @media(max-width: 769px){
         font-size: 12px;
-        line-height: 14.63;
+        line-height: 14.63px;
         margin-top: -6rem;
+        width: 167px;
+        height: 15px;
 
 }
 }
@@ -105,10 +112,14 @@
     font-size: 14px;
     line-height: 23.93px;
     font-weight: 400;
+    width: 485px;
+    height: 54px;
     @media(max-width: 769px){
         font-size: 12px;
         line-height: 19.19px;
         margin-top: -3rem;
+        width: 269px;
+        height: 12px;
 }
 }
 .line {
@@ -134,4 +145,8 @@
     background-color: #D434FE;
     margin-top: 1rem;
     margin-bottom: 0.8rem;
+}
+.section-hidden {
+    opacity: 0;
+    transform: translateY(12rem);
 }

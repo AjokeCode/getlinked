@@ -6,11 +6,12 @@ import img4 from '../footer/Vector (13).png';
 import img5 from '../footer/Vector (14).png';
 import img6 from '../register/congratulation.png';
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import './contact.css';
-import '../register/register.css';
+import { BallTriangle } from "react-loader-spinner";
 
 const Contact =()=>{
+    const [isLoading, setIsLoading]= useState(false)
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -28,6 +29,7 @@ const Contact =()=>{
     const [isSuccessful, setIsSuccessful] = useState(false)
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true)
         try {
           const response = await fetch('https://backend.getlinked.ai/hackathon/contact-form', {
             method: 'POST',
@@ -38,18 +40,36 @@ const Contact =()=>{
           });
       
           if (response.ok) {
-            console.log(response);
+            setIsLoading(false)
             setIsSuccessful(true)
           } else {
-            const errorData = await response.json();
             alert("There is error submitting this form please submit again");
-            console.error(errorData);
+            setIsLoading(false)
             
           }
         } catch (error) {
             alert('Unexpected error occur')
             console.error(error)
         }};
+        
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+      const revealcallbk = function (entries) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('section-hidden');
+      };
+  
+      const revealSection = new IntersectionObserver(revealcallbk, {
+        root: null,
+        threshold: 0.15,
+      });
+  
+      if (sectionRef.current) {
+        revealSection.observe(sectionRef.current);
+        sectionRef.current.classList.add('section-hidden');
+      }}, [])
     return(
         <>
         <Header/>
@@ -71,7 +91,7 @@ const Contact =()=>{
                 </div>
             </div>
         </div>
-        <div className="contact">
+        <div className="contact" ref={sectionRef}>
             <div className="contact-left">
                 <img src={img1} alt="img" className="contact-star"/>
                 <h1 className="contact-left-header">
@@ -121,7 +141,16 @@ const Contact =()=>{
                 className="contact-right-input contact-right-input1"
                 ></textarea>
                 <button type="submit" className="contact-right-btn">
-                    Submit
+                {isLoading?  (<BallTriangle
+                        height={80}
+                        width={80}
+                        radius={5}
+                        color="#ffffff"
+                        ariaLabel="ball-triangle-loading"
+                        wrapperClass={{}}
+                        wrapperStyle=""
+                        visible={true}
+                        />): (<>Submit</>)}
                 </button>
             </form>
             <div className="share-mobile">

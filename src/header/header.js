@@ -5,12 +5,21 @@ import {BsListNested} from 'react-icons/bs';
 import {AiOutlineClose} from 'react-icons/ai';
 
 const Header = ()=>{
-    const [isClick, setIsClick]= useState(false)
+    const [isClick, setIsClick]= useState(false);
+    const [close, setClose] = useState(false)
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
             behavior: 'smooth',
         });
+    }
+    const handleClicks=()=>{
+        setIsClick(true)
+        setClose(true)
+    }
+    const handleifClick=()=>{
+        setIsClick(false)
+        setClose(false)
     }
 
     return (
@@ -42,12 +51,16 @@ const Header = ()=>{
                 </li>
             </ul>
             
-               <BsListNested className='open' onClick={()=> setIsClick(true)}/>
+               {
+                !close? (
+                    <BsListNested className='open' onClick={handleClicks}/>
+                ): ''
+               }
                
                {isClick ?
                 <>
               <div className='ham-div'>
-              <AiOutlineClose className='close' onClick={()=> setIsClick(false)}/>
+              <AiOutlineClose className='close' onClick={handleifClick}/>
                 <ul className="header-lists">
                 <li className="header-items" onClick={scrollToTop}>
                 <Link to={'/timeline'} className='header-link'>

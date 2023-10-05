@@ -4,6 +4,7 @@
     padding: 7rem 9rem;
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     @media(max-width: 769px){
         flex-direction: column;
         align-items: center;
@@ -78,6 +79,9 @@
     margin-bottom: 4rem;
     @media(max-width: 769px){
        text-align: center;
+       font-size: 12px;
+       line-height: 22.61px;
+       margin-bottom: .5rem;
     }
 }
 .privacy-left-div {
@@ -90,11 +94,12 @@
     align-items: center;
     padding: 5rem 0;
     @media(max-width: 769px){
-        width: 395px;
+        width: 375px;
         height: 580px;
         text-align: center;
-        padding: 2rem 0 1rem 0;
+        padding: 1rem  1rem ;
         justify-content: center;
+        
     }
 }
 .privacy-left-text2 {
@@ -161,4 +166,8 @@
     color: #FFFFFF;
     border: none;
     margin-top: 1rem;
+}
+.section-hidden {
+    opacity: 0;
+    transform: translateY(12rem);
 }

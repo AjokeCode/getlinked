@@ -2,11 +2,31 @@ import img1 from './08 1.png';
 import img2 from './Vector (10).png';
 import img3 from './list terms.png';
 import './privacy.css';
+import { useRef, useEffect } from 'react';
 
 
 const Privacy =()=>{
+
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+      const revealcallbk = function (entries) {
+        const [entry] = entries;
+        if (!entry.isIntersecting) return;
+        entry.target.classList.remove('section-hidden');
+      };
+  
+      const revealSection = new IntersectionObserver(revealcallbk, {
+        root: null,
+        threshold: 0.15,
+      });
+  
+      if (sectionRef.current) {
+        revealSection.observe(sectionRef.current);
+        sectionRef.current.classList.add('section-hidden');
+      }}, [])
     return(
-        <div className="privacy">
+        <div className="privacy" ref={sectionRef}>
             <div className="privacy-left">
                 <h1 className='privacy-left-header'>
                     Privacy Policy and<br/><span className='privacy-left-span'>Terms</span>
