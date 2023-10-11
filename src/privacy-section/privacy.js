@@ -28,23 +28,24 @@ const Privacy =()=>{
     return(
         <div className="privacy" ref={sectionRef}>
             <div className="privacy-left">
+                <div className='privacy-left-1'>
                 <h1 className='privacy-left-header'>
-                    Privacy Policy and<br/><span className='privacy-left-span'>Terms</span>
+                    Privacy Policy and<span className='privacy-left-span'>Terms</span>
                 </h1>
                 <h2 className='privacy-left-header2'>
                     Last updated on September 12, 2023
                 </h2>
                 <p className='privacy-left-text'>
-                    Below are our privacy & policy, which outline alot of goodies<br/>
+                    Below are our privacy & policy, which outline alot of goodies
                     it's our aim to always take care of our participant
                 </p>
                 <div className='privacy-left-div'>
                     <p className='privacy-left-text2'>
-                    At getlinked tech Hackhathon1.0, we value your privacy<br/>
-                    and are committed to protect your personal information.<br/>
-                    This Privacy Policy outlines how we collect, use, disclose<br/>
-                    and safeguard your data when you participate in our tech<br/>
-                    Hackhathon event. By participate in our event, you consent<br/>
+                    At getlinked tech Hackhathon1.0, we value your privacy
+                    and are committed to protect your personal information.
+                    This Privacy Policy outlines how we collect, use, disclose
+                    and safeguard your data when you participate in our tech
+                    Hackhathon event. By participate in our event, you consent
                     to the practices described in this policy.
                 </p>
                 <h1 className='privacy-left-header3'>
@@ -56,7 +57,7 @@ const Privacy =()=>{
                 <div className='privacy-left-div2'>
                     <img src={img3} alt='img' className='privacy-left-mark'/>
                     <p className='privacy-left-text3'>
-                        The Standard License grant you an exclusive right to<br/>
+                        The Standard License grant you an exclusive right to
                         navigate and register for our event.
                     </p>
                 </div>
@@ -64,13 +65,14 @@ const Privacy =()=>{
                 <div className='privacy-left-div2'>
                     <img src={img3} alt='img' className='privacy-left-mark'/>
                     <p className='privacy-left-text3'>
-                        You are Licensed to use the item available at any free source<br/>
+                        You are Licensed to use the item available at any free source
                         sites for your project development 
                     </p>
                 </div>
                 <button className='privacy-left-btn'>
                     Read more
                 </button>
+                </div>
                 </div>
             </div>
             <div className="privacy-right">

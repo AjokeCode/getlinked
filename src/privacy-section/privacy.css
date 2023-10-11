@@ -1,10 +1,11 @@
 .privacy {
     display: flex;
     justify-content: space-between;
-    padding: 7rem 9rem;
+    padding: 7rem 4rem;
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     transition: all 2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    width: 100%;
     @media(max-width: 769px){
         flex-direction: column;
         align-items: center;
@@ -13,36 +14,48 @@
 .privacy-left {
     display: flex;
     flex-direction: column;
+    width: 50%;
     @media(max-width: 769px){
        align-items: center;
+       width: 100%;
     }
+}
+.privacy-left-1 {
+    width: 100%;
 }
 .privacy-right {
     display: flex;
     flex-direction: column;
+    max-width: 40%;
     @media(max-width: 769px){
         align-items: center;
         margin-top: 4rem;
+        max-width: 100%;
+        width: 100%;
     }
 }
 .privacy-right-top {
     z-index: 10;
-    width: 530px;
-    height: 648px;
+    width: 100%;
+    height: 100%;
+    /* width: 530px;
+    height: 648px; */
     @media(max-width: 769px){
-        width: 249px;
-        height: 311px;
+         width: 249px;
+        height: 311px; 
     }
 }
 .privacy-right-bottom {
     z-index: 20;
     margin-top: -45rem;
     padding-right: 10rem;
-    width: 559px;
-    height: 749px;
+    width: 100%;
+    height: 100%;
+    /* width: 559px;
+    height: 749px; */
     @media(max-width: 769px){
         width: 262px;
-        height: 351px;
+        height: 351px; 
         margin-top: -23rem;
         padding-right: 6rem;
     }
@@ -58,6 +71,7 @@
         text-align: center;
     }
 }
+
 .privacy-left-span {
     color: #D434FE;
 }
@@ -69,7 +83,7 @@
     margin-bottom: 3rem;
     @media(max-width: 769px){
         font-size: 12px;
-        
+        text-align: center;
     }
 }
 .privacy-left-text {
@@ -85,17 +99,17 @@
     }
 }
 .privacy-left-div {
-    width: 569px;
-    height: 608px;
+    /* width: 569px;
+    height: 608px; */
     border-radius: 5px;
     border: 1px solid #D434FE;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 0;
+    padding: 5rem 2rem;
     @media(max-width: 769px){
-        width: 375px;
-        height: 580px;
+        /* width: 375px;
+        height: 580px; */
         text-align: center;
         padding: 1rem  1rem ;
         justify-content: center;

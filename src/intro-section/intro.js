@@ -31,7 +31,7 @@ const Intro =()=>{
             <img src={img2} alt="img" className='intro-left-img3'/>
             </div>
             <div className='intro-right'>
-                <div>
+                <div className='intro-right-1'>
                 <h1 className='intro-right-header'>Introduction to getlinked<br/>
                 <span className='intro-right-header2'>tech Hackathon1.0</span></h1>
                 <p className='intro-right-text'>Our tech hackathon is a melting pt of 

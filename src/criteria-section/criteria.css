@@ -1,11 +1,13 @@
 .criteria {
     display: flex;
     justify-content: space-between;
-    padding: 4rem 0.1rem;
+    align-items: center;
+    padding: 4rem;
     background-color: #150E28;
     color: #ffffff;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     transition: all 2s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    width: 100%;
     @media(max-width: 769px){
         flex-direction: column;
         align-items: center;
@@ -13,13 +15,15 @@
 }
 }
 .criteria-right {
-    padding: 4rem 1rem 0 0;
+    
+    width: 50%;
     @media(max-width: 769px){
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
+        width: 100%;
 }
 
 }
@@ -43,13 +47,9 @@
     font-weight: 700;
     color: #FF26B9;
     margin-bottom: 1.8rem;
-    width: 558px;
-    height: 75px;
     @media(max-width: 769px){
         font-size: 13px;
         line-height: 20.82px;
-        width: 296px;
-        height: 45px;
         margin-bottom: 8rem;
 }
 
@@ -86,19 +86,23 @@
 }
 .criteria-left {
     margin-left: -1rem;
-    width: 710px;
+    max-width: 40%;
     @media(max-width: 769px){
         display: flex;
         align-items: center;
         justify-content: center;
+        max-width: 100%;
+        width: 100%;
 }
 
 }
 .criteria-left-img {
-    @media(max-width: 769px){
+    width: 100%;
+    height: 100%;
+     @media(max-width: 769px){
         width: 332px;
         height: 275px;
-}
+} 
 }
 .section-hidden {
     opacity: 0;

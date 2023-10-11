@@ -78,7 +78,7 @@ const Hero =()=>{
                 <img src={chain} alt='img' className='chain'/>
                 <img src={chain2} alt='img' className='chain2'/>
                 </div>
-                <p className='hero-2-left-text'>Participate in getlinked Tech Hackathon 2023 stand<br/>
+                <p className='hero-2-left-text'>Participate in getlinked Tech Hackathon 2023 stand
                 a chance to win a big price</p>
                 <div className='btn-flex'>
                 <button className='hero-2-left-btn'>

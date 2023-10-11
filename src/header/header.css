@@ -10,7 +10,7 @@
     z-index: 300;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     @media(max-width: 769px){
-        padding: 0 2rem;
+        padding: 0 8rem;
        }
 }
 .header-list {
@@ -28,6 +28,9 @@
 }
 .header-item {
     margin-left: 2rem;
+    @media(max-width: 769px){
+        display: none;
+       }
 }
 .header-1 {
     font-size: 36px;
@@ -45,12 +48,12 @@
     color: #D434FE;
 }
 .header-item-2 {
-    width: 172px;
-    height: 53px;
+    width: 17.2rem;
+    height: 5.3rem;
     background-image: linear-gradient(to right bottom, #D434FE, #903aff);
     text-align: center;
     border-radius: 4px;
-    padding-top: 18px;
+    padding-top: 1.8rem;
 }
 .header-link {
     text-decoration: none;
@@ -70,7 +73,7 @@
 .close {
     color: #FFFFFF;
     font-size: 6rem;
-    margin-left: 12rem;
+    align-self: flex-end;
     cursor: pointer;
     
 }
