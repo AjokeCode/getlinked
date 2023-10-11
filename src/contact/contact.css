@@ -8,6 +8,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        padding-top: 11rem;
       }
 } 
 .contact-left{
@@ -62,7 +63,7 @@
     @media(max-width: 769px){
         width: 396px;
         height: 442px;
-        padding: 2rem;
+        padding: 2rem 3rem;
       }
 }
 .contact-right-header {

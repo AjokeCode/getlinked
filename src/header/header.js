@@ -3,8 +3,10 @@ import './header.css';
 import { useState } from 'react';
 import {BsListNested} from 'react-icons/bs';
 import {AiOutlineClose} from 'react-icons/ai';
+import { useLocation } from 'react-router-dom';
 
 const Header = ()=>{
+    const location = useLocation();
     const [isClick, setIsClick]= useState(false);
     const [close, setClose] = useState(false)
     const scrollToTop = () => {
@@ -29,23 +31,33 @@ const Header = ()=>{
             </h1>
             <ul className="header-list">
                 <li className="header-item" onClick={scrollToTop}>
-                    <Link to={'/timeline'} className='header-link'>
-                    Timeline
+                    <Link to={'/'}  className={` ${
+              location.pathname === '/' ? 'color' : 'header-link'
+            }`} >
+                    Home
                     </Link>
                 </li>
                 <li className="header-item" onClick={scrollToTop}>
-                    <Link to={'/overview'} className='header-link'>Overview</Link>
+                    <Link to={'/overview'}  className={` ${
+              location.pathname === '/overview' ? 'color' : 'header-link'
+            }`}>Overview</Link>
                 </li>
                 <li className="header-item" onClick={scrollToTop}>
-                    <Link to={'/faqs'} className='header-link'>Faqs</Link>
+                    <Link to={'/faqs'}  className={` ${
+              location.pathname === '/faqs' ? 'color' : 'header-link'
+            }`}>Faqs</Link>
                 </li>
                 <li className="header-item" onClick={scrollToTop}>
-                    <Link to={'/contact'} className='header-link'>
+                    <Link to={'/contact'}  className={` ${
+              location.pathname === '/contact' ? 'color' : 'header-link'
+            }`}>
                     Contact
                     </Link>
                 </li>
                 <li className="header-item header-item-2" onClick={scrollToTop}>
-                    <Link to={'/register'} className='header-link'>
+                    <Link to={'/register'}  className={` ${
+              location.pathname === '/register' ? 'color' : 'header-link'
+            }`}>
                     Register
                     </Link>
                 </li>
@@ -63,23 +75,33 @@ const Header = ()=>{
               <AiOutlineClose className='close' onClick={handleifClick}/>
                 <ul className="header-lists">
                 <li className="header-items" onClick={scrollToTop}>
-                <Link to={'/timeline'} className='header-link'>
-                    Timeline
+                <Link to={'/'}  className={` ${
+              location.pathname === '/' ? 'color' : 'header-link'
+            }`}>
+                    Home
                     </Link>
                 </li>
                 <li className="header-items" onClick={scrollToTop}>
-                <Link to={'/overview'} className='header-link'>Overview</Link>
+                <Link to={'/overview'}  className={` ${
+              location.pathname === '/overview' ? 'color' : 'header-link'
+            }`}>Overview</Link>
                 </li>
                 <li className="header-items" onClick={scrollToTop}>
-                <Link to={'/faqs'} className='header-link'>Faqs</Link>
+                <Link to={'/faqs'}  className={` ${
+              location.pathname === '/faqs' ? 'color' : 'header-link'
+            }`}>Faqs</Link>
                 </li>
                 <li className="header-items" onClick={scrollToTop}>
-                    <Link to={'/contact'} className='header-link'>
+                    <Link to={'/contact'}  className={` ${
+              location.pathname === '/contact' ? 'color' : 'header-link'
+            }`}>
                     Contact
                     </Link>
                 </li>
                 <li className="header-items header-items-2" onClick={scrollToTop}>
-                    <Link to={'/register'} className='header-link'>
+                    <Link to={'/register'}  className={` ${
+              location.pathname === '/register' ? 'color' : 'header-link'
+            }`}>
                     Register
                     </Link>
                 </li>
